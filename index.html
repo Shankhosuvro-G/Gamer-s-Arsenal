@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.25">
+    <title>
+      LuxeCart
+    </title>
+    <link
+      rel="icon"
+      href="./images/gamers Arsenal logo.png"
+      type="image/x-icon"
+    />
+    <style>
+      @import url('https://fonts.cdnfonts.com/css/product-sans'); body{ background:
+      #191919; margin: 0; padding: 0; font-family: 'Product Sans', sans-serif;
+      height: 100%; width: 100%; } .nav1 h2{ margin: 0; } .nav-content { display:
+      flex; justify-content: space-between; align-items: center; } .nav1{ font-family:
+      'Product Sans', sans-serif; background-color: #191919; padding: 5px; }
+      .nav-content .name { color: #eeeeee; margin: 0; padding-left: 10px; font-size:
+      20px; } .nav1 ul{ margin: 0; padding: 0; list-style-type: none; display:
+      flex; justify-content: right; } .nav1 li{ margin: 15px; display: inline;
+      } .nav1 a{ text-decoration: none; color: #eeeeee; padding: 5px 15px; position:
+      relative; font-size: x-large; } .nav1 .login_btn{ background-color: #191919;
+      color: #eeeeee; border: none; padding: 5px; border-radius: 5px; cursor:
+      pointer; transition: background-color 0.3s ease-in-out; } .nav1 a::after{
+      content: ""; position: absolute; height: 2px; width: 100%; bottom: 0; left:
+      0; background-color: #eeeeee; transform: scaleX(0); transition: transform
+      0.3s ease-in-out; } .nav1 a:hover::after{ transform: scaleX(1) } .about{
+      background-color: #3c3c3c; margin: 10px; border-radius: 8px; padding: 10px
+      10px; } .container{ display: flex; background: #191919; justify-content:
+      flex-end; align-items: flex-end; } .footer { position: relative; width:
+      100%; background: #191919; min-height: 100px; padding: 20px 50px; display:
+      flex; justify-content: center; align-items: center; flex-direction: column;
+      } .social-icon, .menu { position: relative; display: flex; justify-content:
+      center; align-items: center; margin: 10px 0; flex-wrap: wrap; } .social-icon__item,
+      .menu__item { list-style: none; } .social-icon__link { font-size: 2rem;
+      color: #fff; margin: 0 10px; display: inline-block; transition: 0.5s; }
+      .social-icon__link:hover { transform: translateY(-10px); } .menu__link
+      { font-size: 1.2rem; color: #fff; margin: 0 10px; display: inline-block;
+      transition: 0.5s; text-decoration: none; opacity: 0.75; font-weight: 300;
+      } .menu__link:hover { opacity: 1; } .footer p { color: #fff; margin: 15px
+      0 10px 0; font-size: 1rem; font-weight: 300; } .grid-container{ margin-left:
+      220px; display: grid; grid-template-columns: repeat(3,340px) ; grid-template-rows:
+      400px; gap: 50px; margin-right: 9px; min-width: auto; } .item{ background-color:
+      #3c3c3c; border-radius: 20px; } .card { background: #3c3c3c; border-radius:
+      10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); width: 300px; text-align:
+      center; padding: 20px; height: 360px; } .card img { border-radius: 50%;
+      width: 150px; height: 150px; } .card h2 { margin: 10px 0; font-size: 1.5em;
+      color: #eeeeee; } .card p { color: #eeeeee; font-size: large; margin: 10px
+      0; } .social{ display: flex; justify-content: space-evenly; }
+    </style>
+  </head>
+  
+  <body>
+    <nav class="nav1">
+      <div class="nav-content">
+        <h2 class="name" style="font-size: xx-large;">
+          Gamer's Arsenal
+        </h2>
+        <ul>
+          
+          <li>
+            <a href="index.html" style="text-decoration: none;color: #eeeeee;">
+              About
+            </a>
+          </li>
+          <li>
+            <a href="products.html" style="text-decoration: none;color: #eeeeee;">
+              Products
+            </a>
+          </li>
+          <li>
+            <a href="cart.html" style="text-decoration: none; color: #eeeeee;">
+              Cart
+            </a>
+          </li>
+          <button style="background-color: #191919; border: none;">
+            <a href="login.html" class="login_btn" target="_blank" style="text-decoration: none;color: #eeeeee;">
+              Login
+            </a>
+          </button>
+        </ul>
+      </div>
+    </nav>
+    <div class="about" style="margin: 10px; text-align: justify; font-size: x-large; color: #eeeeee;">
+      <h2 style="color: #eeeeee; margin: 5px; text-align: center;">
+        About us
+      </h2>
+      Welcome to Gamer's Arsenal, your ultimate destination for top-tier gaming gear and accessories! We specialize in bringing you the finest selection of gaming products to enhance your experience, whether you're exploring epic worlds, dominating multiplayer arenas, or just enjoying a casual game night.
+      Discover powerful consoles, high-performance PCs, immersive VR equipment, and precision-engineered accessories—all carefully curated to meet the needs of every gamer. At Gamer's Arsenal, we aim to empower your play with trusted reviews, expert insights, and a passion for gaming excellence.
+      Gear up, dive in, and let’s redefine gaming together. Game on! 🎮
+    </div>
+    <div style="margin-bottom: 20px;">
+    </div>
+    <div class="about">
+      <h2 style="color: #eeeeee; margin: 5px; text-align: center; font-size: xx-large;">
+        Our story
+      </h2>
+      <table>
+        <th>
+          <img src="./images/gamers Arsenal logo.png"
+          alt="roadmap" height="contain" width="500px" style="border-radius: 10px;">
+        </th>
+        <th>
+          <div class="section_1" style="color: #eeeeee;">
+            <h2>
+              From Humble Beginnings to a Beacon of gaming
+            </h2>
+            <p>
+              In 2022, Gamer's Arsenal was born with a mission: to revolutionize the gaming experience by combining cutting-edge technology with unparalleled expertise. Our journey began with a small but passionate team dedicated to sourcing the finest gaming products and accessories from across the globe.
+            </p>
+          </div>
+          <div class="section_1" style="color: #eeeeee;">
+            <h2>
+              2022: The Launch
+            </h2>
+            <p>
+              Founded with a mission to make gaming accessible to all.
+            </p>
+            <p>
+              Focused on building a seamless and user-friendly online shopping platform for video games.
+            </p>
+          </div>
+          <div class="section_1" style="color: #eeeeee;">
+            <h2>
+              2023: Growth and Expansion
+            </h2>
+            <p>
+              Expanded our product range to include all types of video game consoles and video games.
+            </p>
+            <p>
+              Established partnerships with multiplr platforms to bring exclusive
+              games to our customers.
+            </p>
+          </div>
+          <div class="section_1" style="color: #eeeeee;">
+            <h2>
+              2024: Innovation and Excellence
+            </h2>
+            <p>
+              Introduced AI-driven personalized experiences to cater to the
+              unique tastes of our customers.
+            </p>
+            <p>
+              Launched sustainability initiatives, ensuring that gaming and responsibility
+              go hand in hand.
+            </p>
+          </div>
+          <div class="section_1" style="color: #eeeeee;">
+            <h2>
+              2025: Beyond Boundaries
+            </h2>
+            <p>
+              Continued to innovate with virtual reality gaming experiences.
+            </p>
+            <p>
+              Solidified our reputation as a trusted and sophisticated e-commerce destination.
+            </p>
+        </th>
+      </table>
+      </div>
+      <div style="margin-bottom: 20px;">
+      </div>
+      <div class="Our-Team">
+        <h2 style="text-align: center; color: #eeeeee; font-size: xx-large;">
+          Our Team
+        </h2>
+        <div class="grid-container">
+          <div class="item">
+            <div class="card">
+              <img src="./images/Profile-Avatar-PNG.png" alt="Profile Picture">
+              <h2>
+                Stephen Marlo
+              </h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ratione disuja
+                doloremque reiciendi nemo.
+              </p>
+              <div class="social">
+                <img src="./images/linkedin.png" alt="" style="width: 40px; height: 40px;">
+                <img src="./images/twitter (1).png" alt="" style="width: 40px; height: 40px;">
+                <img src="./images/social.png" alt="" style="width: 40px; height: 40px;">
+                <img src="./images/facebook.png" alt="" style="width: 40px; height: 40px;">
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card">
+              <img src="./images/Profile-Avatar-PNG.png" alt="Profile Picture">
+              <h2>
+                Stephen Marlo
+              </h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ratione disuja
+                doloremque reiciendi nemo.
+              </p>
+              <div class="social">
+                <img src="./images/linkedin.png" alt="" style="width: 40px; height: 40px;">
+                <img src="./images/twitter (1).png" alt="" style="width: 40px; height: 40px;">
+                <img src="./images/social.png" alt="" style="width: 40px; height: 40px;">
+                <img src="./images/facebook.png" alt="" style="width: 40px; height: 40px;">
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card">
+              <img src="./images/Profile-Avatar-PNG.png" alt="Profile Picture">
+              <h2>
+                Stephen Marlo
+              </h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ratione disuja
+                doloremque reiciendi nemo.
+              </p>
+              <div class="social">
+                <img src="./images/linkedin.png" alt="" style="width: 40px; height: 40px;">
+                <img src="./images/twitter (1).png" alt="" style="width: 40px; height: 40px;">
+                <img src="./images/social.png" alt="" style="width: 40px; height: 40px;">
+                <img src="./images/facebook.png" alt="" style="width: 40px; height: 40px;">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-bottom: 20px;">
+      </div>
+      <div class="container">
+        <footer class="footer">
+          <ul class="social-icon">
+            <li class="social-icon__item">
+              <a class="social-icon__link" href="#">
+                <ion-icon name="logo-facebook">
+                </ion-icon>
+              </a>
+            </li>
+            <li class="social-icon__item">
+              <a class="social-icon__link" href="#">
+                <ion-icon name="logo-twitter">
+                </ion-icon>
+              </a>
+            </li>
+            <li class="social-icon__item">
+              <a class="social-icon__link" href="#">
+                <ion-icon name="logo-linkedin">
+                </ion-icon>
+              </a>
+            </li>
+            <li class="social-icon__item">
+              <a class="social-icon__link" href="#">
+                <ion-icon name="logo-instagram">
+                </ion-icon>
+              </a>
+            </li>
+          </ul>
+          <p>
+            <span>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            &copy;2025 Gamer's Arsenal | All Rights Reserved
+          </p>
+        </footer>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js">
+        </script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js">
+        </script>
+      </div>
+  </body>
+
+</html>

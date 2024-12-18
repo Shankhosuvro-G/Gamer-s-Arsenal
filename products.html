@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.25" />
+    <title>Project</title>
+    <link
+      rel="icon"
+      href="./images/gamers Arsenal logo.png"
+      type="image/x-icon"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <style>
+      @import url("https://fonts.cdnfonts.com/css/product-sans");
+      body {
+        background: #191919;
+        margin: 0;
+        padding: 0;
+        font-family: "Product Sans", sans-serif;
+        height: 100%;
+        width: 100%;
+      }
+      .nav1 h2 {
+        margin: 0;
+      }
+      .nav-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .nav1 {
+        font-family: "Product Sans", sans-serif;
+        background-color: #191919;
+        padding: 5px;
+      }
+      .nav-content .name {
+        color: #eeeeee;
+        margin: 0;
+        padding-left: 10px;
+        font-size: 20px;
+      }
+      .nav1 ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        justify-content: right;
+      }
+      .nav1 li {
+        margin: 15px;
+        display: inline;
+      }
+      .nav1 a {
+        text-decoration: none;
+        color: #eeeeee;
+        padding: 5px 15px;
+        position: relative;
+        font-size: x-large;
+      }
+      .nav1 .login_btn {
+        background-color: #3c3c3c;
+        color: #eeeeee;
+        border: none;
+        padding: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .nav1 a::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        background-color: #eeeeee;
+        transform: scaleX(0);
+        transition: transform 0.3s ease-in-out;
+      }
+      .nav1 a:hover::after {
+        transform: scaleX(1);
+      }
+      .grid-container {
+        margin-left: 16px;
+        display: grid;
+        grid-template-columns: repeat(3, 490px);
+        grid-template-rows: repeat(3, 480px);
+        gap: 4px;
+        margin-right: 5px;
+        min-width: auto;
+      }
+      .item {
+        background-color: #3c3c3c;
+        border-radius: 20px;
+      }
+      .item1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+      }
+      button {
+        font-size: large;
+        font-family: "Product Sans", sans-serif;
+        padding: 20px;
+        gap: 10px;
+        margin: 10px;
+        justify-content: space-evenly;
+        border: none;
+        border-radius: 30px;
+        justify-content: space-evenly;
+        margin-bottom: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+      }
+      h1 {
+        margin-bottom: 0;
+        font-size: xx-large;
+      }
+      p {
+        margin-top: 3px;
+      }
+      button:hover {
+        background-color: #191919;
+        color: #eeeeee;
+      }
+      button svg {
+        transition: stroke 0.3s ease-in-out;
+      }
+
+      button:hover svg {
+        stroke: #eeeeee;
+      }
+      .login_btn {
+        font-size: x-large;
+        transition: background-color 0.3s ease-in-out;
+      }
+      .login_btn:hover {
+        color: #191919;
+        background-color: #eeeeee;
+      }
+      .container {
+        display: flex;
+        background: #191919;
+        justify-content: flex-end;
+        align-items: flex-end;
+      }
+
+      .footer {
+        position: relative;
+        width: 100%;
+        background: #191919;
+        min-height: 100px;
+        padding: 20px 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .social-icon,
+      .menu {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0;
+        flex-wrap: wrap;
+      }
+
+      .social-icon__item,
+      .menu__item {
+        list-style: none;
+      }
+
+      .social-icon__link {
+        font-size: 2rem;
+        color: #fff;
+        margin: 0 10px;
+        display: inline-block;
+        transition: 0.5s;
+      }
+      .social-icon__link:hover {
+        transform: translateY(-10px);
+      }
+
+      .menu__link {
+        font-size: 1.2rem;
+        color: #fff;
+        margin: 0 10px;
+        display: inline-block;
+        transition: 0.5s;
+        text-decoration: none;
+        opacity: 0.75;
+        font-weight: 300;
+      }
+
+      .menu__link:hover {
+        opacity: 1;
+      }
+
+      .footer p {
+        color: #fff;
+        margin: 15px 0 10px 0;
+        font-size: 1rem;
+        font-weight: 300;
+      }
+      .carousel {
+        margin-left: 20px;
+        width: 1470px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav1">
+      <div class="nav-content">
+        <h2 class="name" style="font-size: xx-large">Gamer's Arsenal</h2>
+        <ul>
+          <li><a href="index.html">About</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <button class="login_btn">
+            <a href="login.html" class="login_btn" target="_blank">Login</a>
+          </button>
+        </ul>
+      </div>
+    </nav>
+    <h2 style="text-align: center; margin-bottom: 20px; color: #eeeeee">
+      Featured Products
+    </h2>
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            style="border-radius: 20px"
+            src="./images/Xbox-Series-X_S.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            style="border-radius: 20px"
+            src="./images/playstation.jpeg"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            style="border-radius: 20px"
+            src="./images/nintendo.avif"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <h2
+      class="page-name"
+      style="
+        text-align: center;
+        color: #eeeeee;
+        font-size: xx-large;
+        margin-top: 25px;
+      "
+    >
+      All Products
+    </h2>
+    <div class="grid-container">
+      <div class="item item1">
+        <img
+          src="./images/cup-logo.png"
+          class="logo1"
+          alt="cup logo"
+          style="width: 270px; object-fit: contain"
+        />
+        <h1 style="color: #eeeeee">Product 1</h1>
+        <p style="color: #eeeeee">$25</p>
+        <form id="buying_form">
+          <button onclick="addToCart('Product 1', 25)">
+            Buy now
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#000000"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path d="M6 3h12"></path>
+                <path d="M6 8h12"></path>
+                <path d="M6 13l8.5 8"></path>
+                <path d="M6 13h3"></path>
+                <path d="M9 13c6.667 0 6.667-10 0-10"></path>
+              </g>
+            </svg>
+          </button>
+          <button onclick="addToCart('Product 1', 25)">
+            Add to Cart
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              width="21"
+              height="21"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M7.5 18C8.32843 18 9 18.6716 9 19.5C9 20.3284 8.32843 21 7.5 21C6.67157 21 6 20.3284 6 19.5C6 18.6716 6.67157 18 7.5 18Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M16.5 18.0001C17.3284 18.0001 18 18.6716 18 19.5001C18 20.3285 17.3284 21.0001 16.5 21.0001C15.6716 21.0001 15 20.3285 15 19.5001C15 18.6716 15.6716 18.0001 16.5 18.0001Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M13 13V11M13 11V9M13 11H15M13 11H11"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                ></path>
+                <path
+                  d="M2 3L2.26121 3.09184C3.5628 3.54945 4.2136 3.77826 4.58584 4.32298C4.95808 4.86771 4.95808 5.59126 4.95808 7.03836V9.76C4.95808 12.7016 5.02132 13.6723 5.88772 14.5862C6.75412 15.5 8.14857 15.5 10.9375 15.5H12M16.2404 15.5C17.8014 15.5 18.5819 15.5 19.1336 15.0504C19.6853 14.6008 19.8429 13.8364 20.158 12.3075L20.6578 9.88275C21.0049 8.14369 21.1784 7.27417 20.7345 6.69708C20.2906 6.12 18.7738 6.12 17.0888 6.12H11.0235M4.95808 6.12H7"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                ></path>
+              </g>
+            </svg>
+          </button>
+        </form>
+      </div>
+      <div class="item item1">
+        <img
+          src="./images/cup-logo.png"
+          class="logo1"
+          alt="cup logo"
+          style="width: 270px; object-fit: contain"
+        />
+        <h1 style="color: #eeeeee">Product 2</h1>
+        <p style="color: #eeeeee">$35</p>
+        <form id="buying_form">
+          <button onclick="addToCart('Product 2', 35)">
+            Buy now
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#000000"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path d="M6 3h12"></path>
+                <path d="M6 8h12"></path>
+                <path d="M6 13l8.5 8"></path>
+                <path d="M6 13h3"></path>
+                <path d="M9 13c6.667 0 6.667-10 0-10"></path>
+              </g>
+            </svg>
+          </button>
+          <button onclick="addToCart('Product 2', 35)">
+            Add to Cart
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              width="21"
+              height="21"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M7.5 18C8.32843 18 9 18.6716 9 19.5C9 20.3284 8.32843 21 7.5 21C6.67157 21 6 20.3284 6 19.5C6 18.6716 6.67157 18 7.5 18Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M16.5 18.0001C17.3284 18.0001 18 18.6716 18 19.5001C18 20.3285 17.3284 21.0001 16.5 21.0001C15.6716 21.0001 15 20.3285 15 19.5001C15 18.6716 15.6716 18.0001 16.5 18.0001Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M13 13V11M13 11V9M13 11H15M13 11H11"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                ></path>
+                <path
+                  d="M2 3L2.26121 3.09184C3.5628 3.54945 4.2136 3.77826 4.58584 4.32298C4.95808 4.86771 4.95808 5.59126 4.95808 7.03836V9.76C4.95808 12.7016 5.02132 13.6723 5.88772 14.5862C6.75412 15.5 8.14857 15.5 10.9375 15.5H12M16.2404 15.5C17.8014 15.5 18.5819 15.5 19.1336 15.0504C19.6853 14.6008 19.8429 13.8364 20.158 12.3075L20.6578 9.88275C21.0049 8.14369 21.1784 7.27417 20.7345 6.69708C20.2906 6.12 18.7738 6.12 17.0888 6.12H11.0235M4.95808 6.12H7"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                ></path>
+              </g>
+            </svg>
+          </button>
+        </form>
+      </div>
+      <div class="item item1">
+        <img
+          src="./images/cup-logo.png"
+          class="logo1"
+          alt="cup logo"
+          style="width: 270px; object-fit: contain"
+        />
+        <h1 style="color: #eeeeee">Product 3</h1>
+        <p style="color: #eeeeee">$25</p>
+        <form id="buying_form">
+          <button onclick="addToCart('Product 3', 25)">
+            Buy now
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#000000"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path d="M6 3h12"></path>
+                <path d="M6 8h12"></path>
+                <path d="M6 13l8.5 8"></path>
+                <path d="M6 13h3"></path>
+                <path d="M9 13c6.667 0 6.667-10 0-10"></path>
+              </g>
+            </svg>
+          </button>
+          <button onclick="addToCart('Product 3', 25)">
+            Add to Cart
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              width="21"
+              height="21"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M7.5 18C8.32843 18 9 18.6716 9 19.5C9 20.3284 8.32843 21 7.5 21C6.67157 21 6 20.3284 6 19.5C6 18.6716 6.67157 18 7.5 18Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M16.5 18.0001C17.3284 18.0001 18 18.6716 18 19.5001C18 20.3285 17.3284 21.0001 16.5 21.0001C15.6716 21.0001 15 20.3285 15 19.5001C15 18.6716 15.6716 18.0001 16.5 18.0001Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M13 13V11M13 11V9M13 11H15M13 11H11"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                ></path>
+                <path
+                  d="M2 3L2.26121 3.09184C3.5628 3.54945 4.2136 3.77826 4.58584 4.32298C4.95808 4.86771 4.95808 5.59126 4.95808 7.03836V9.76C4.95808 12.7016 5.02132 13.6723 5.88772 14.5862C6.75412 15.5 8.14857 15.5 10.9375 15.5H12M16.2404 15.5C17.8014 15.5 18.5819 15.5 19.1336 15.0504C19.6853 14.6008 19.8429 13.8364 20.158 12.3075L20.6578 9.88275C21.0049 8.14369 21.1784 7.27417 20.7345 6.69708C20.2906 6.12 18.7738 6.12 17.0888 6.12H11.0235M4.95808 6.12H7"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                ></path>
+              </g>
+            </svg>
+          </button>
+        </form>
+      </div>
+      <div class="item item1">
+        <img
+          src="./images/cup-logo.png"
+          class="logo1"
+          alt="cup logo"
+          style="width: 270px; object-fit: contain"
+        />
+        <h1 style="color: #eeeeee">Product 4</h1>
+        <p style="color: #eeeeee">$35</p>
+        <form id="buying_form">
+          <button onclick="addToCart('Product 4', 35)">
+            Buy now
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#000000"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path d="M6 3h12"></path>
+                <path d="M6 8h12"></path>
+                <path d="M6 13l8.5 8"></path>
+                <path d="M6 13h3"></path>
+                <path d="M9 13c6.667 0 6.667-10 0-10"></path>
+              </g>
+            </svg>
+          </button>
+          <button onclick="addToCart('Product 4', 35)">
+            Add to Cart
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              width="21"
+              height="21"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M7.5 18C8.32843 18 9 18.6716 9 19.5C9 20.3284 8.32843 21 7.5 21C6.67157 21 6 20.3284 6 19.5C6 18.6716 6.67157 18 7.5 18Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M16.5 18.0001C17.3284 18.0001 18 18.6716 18 19.5001C18 20.3285 17.3284 21.0001 16.5 21.0001C15.6716 21.0001 15 20.3285 15 19.5001C15 18.6716 15.6716 18.0001 16.5 18.0001Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M13 13V11M13 11V9M13 11H15M13 11H11"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                ></path>
+                <path
+                  d="M2 3L2.26121 3.09184C3.5628 3.54945 4.2136 3.77826 4.58584 4.32298C4.95808 4.86771 4.95808 5.59126 4.95808 7.03836V9.76C4.95808 12.7016 5.02132 13.6723 5.88772 14.5862C6.75412 15.5 8.14857 15.5 10.9375 15.5H12M16.2404 15.5C17.8014 15.5 18.5819 15.5 19.1336 15.0504C19.6853 14.6008 19.8429 13.8364 20.158 12.3075L20.6578 9.88275C21.0049 8.14369 21.1784 7.27417 20.7345 6.69708C20.2906 6.12 18.7738 6.12 17.0888 6.12H11.0235M4.95808 6.12H7"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                ></path>
+              </g>
+            </svg>
+          </button>
+        </form>
+      </div>
+      <div class="item item1">
+        <img
+          src="./images/cup-logo.png"
+          class="logo1"
+          alt="cup logo"
+          style="width: 270px; object-fit: contain"
+        />
+        <h1 style="color: #eeeeee">Product 5</h1>
+        <p style="color: #eeeeee">$79</p>
+        <form id="buying_form">
+          <button onclick="addToCart('Product 5', 79)">
+            Buy now
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#000000"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path d="M6 3h12"></path>
+                <path d="M6 8h12"></path>
+                <path d="M6 13l8.5 8"></path>
+                <path d="M6 13h3"></path>
+                <path d="M9 13c6.667 0 6.667-10 0-10"></path>
+              </g>
+            </svg>
+          </button>
+          <button onclick="addToCart('Product 5', 79)">
+            Add to Cart
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              width="21"
+              height="21"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M7.5 18C8.32843 18 9 18.6716 9 19.5C9 20.3284 8.32843 21 7.5 21C6.67157 21 6 20.3284 6 19.5C6 18.6716 6.67157 18 7.5 18Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M16.5 18.0001C17.3284 18.0001 18 18.6716 18 19.5001C18 20.3285 17.3284 21.0001 16.5 21.0001C15.6716 21.0001 15 20.3285 15 19.5001C15 18.6716 15.6716 18.0001 16.5 18.0001Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M13 13V11M13 11V9M13 11H15M13 11H11"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                ></path>
+                <path
+                  d="M2 3L2.26121 3.09184C3.5628 3.54945 4.2136 3.77826 4.58584 4.32298C4.95808 4.86771 4.95808 5.59126 4.95808 7.03836V9.76C4.95808 12.7016 5.02132 13.6723 5.88772 14.5862C6.75412 15.5 8.14857 15.5 10.9375 15.5H12M16.2404 15.5C17.8014 15.5 18.5819 15.5 19.1336 15.0504C19.6853 14.6008 19.8429 13.8364 20.158 12.3075L20.6578 9.88275C21.0049 8.14369 21.1784 7.27417 20.7345 6.69708C20.2906 6.12 18.7738 6.12 17.0888 6.12H11.0235M4.95808 6.12H7"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                ></path>
+              </g>
+            </svg>
+          </button>
+        </form>
+      </div>
+      <div class="item item1">
+        <img
+          src="./images/cup-logo.png"
+          class="logo1"
+          alt="cup logo"
+          style="width: 270px; object-fit: contain"
+        />
+        <h1 style="color: #eeeeee">Product 6</h1>
+        <p style="color: #eeeeee">$84</p>
+        <form id="buying_form">
+          <button onclick="addToCart('Product 6', 84)">
+            Buy now
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#000000"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path d="M6 3h12"></path>
+                <path d="M6 8h12"></path>
+                <path d="M6 13l8.5 8"></path>
+                <path d="M6 13h3"></path>
+                <path d="M9 13c6.667 0 6.667-10 0-10"></path>
+              </g>
+            </svg>
+          </button>
+          <button onclick="addToCart('Product 6', 84)">
+            Add to Cart
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              width="21"
+              height="21"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M7.5 18C8.32843 18 9 18.6716 9 19.5C9 20.3284 8.32843 21 7.5 21C6.67157 21 6 20.3284 6 19.5C6 18.6716 6.67157 18 7.5 18Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M16.5 18.0001C17.3284 18.0001 18 18.6716 18 19.5001C18 20.3285 17.3284 21.0001 16.5 21.0001C15.6716 21.0001 15 20.3285 15 19.5001C15 18.6716 15.6716 18.0001 16.5 18.0001Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M13 13V11M13 11V9M13 11H15M13 11H11"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                ></path>
+                <path
+                  d="M2 3L2.26121 3.09184C3.5628 3.54945 4.2136 3.77826 4.58584 4.32298C4.95808 4.86771 4.95808 5.59126 4.95808 7.03836V9.76C4.95808 12.7016 5.02132 13.6723 5.88772 14.5862C6.75412 15.5 8.14857 15.5 10.9375 15.5H12M16.2404 15.5C17.8014 15.5 18.5819 15.5 19.1336 15.0504C19.6853 14.6008 19.8429 13.8364 20.158 12.3075L20.6578 9.88275C21.0049 8.14369 21.1784 7.27417 20.7345 6.69708C20.2906 6.12 18.7738 6.12 17.0888 6.12H11.0235M4.95808 6.12H7"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                ></path>
+              </g>
+            </svg>
+          </button>
+        </form>
+      </div>
+      <div class="item item1">
+        <img
+          src="./images/cup-logo.png"
+          class="logo1"
+          alt="cup logo"
+          style="width: 270px; object-fit: contain"
+        />
+        <h1 style="color: #eeeeee">Product 7</h1>
+        <p style="color: #eeeeee">$102</p>
+        <form id="buying_form">
+          <button onclick="addToCart('Product 7', 102)">
+            Buy now
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#000000"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path d="M6 3h12"></path>
+                <path d="M6 8h12"></path>
+                <path d="M6 13l8.5 8"></path>
+                <path d="M6 13h3"></path>
+                <path d="M9 13c6.667 0 6.667-10 0-10"></path>
+              </g>
+            </svg>
+          </button>
+          <button onclick="addToCart('Product 7', 102)">
+            Add to Cart
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              width="21"
+              height="21"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M7.5 18C8.32843 18 9 18.6716 9 19.5C9 20.3284 8.32843 21 7.5 21C6.67157 21 6 20.3284 6 19.5C6 18.6716 6.67157 18 7.5 18Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M16.5 18.0001C17.3284 18.0001 18 18.6716 18 19.5001C18 20.3285 17.3284 21.0001 16.5 21.0001C15.6716 21.0001 15 20.3285 15 19.5001C15 18.6716 15.6716 18.0001 16.5 18.0001Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M13 13V11M13 11V9M13 11H15M13 11H11"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                ></path>
+                <path
+                  d="M2 3L2.26121 3.09184C3.5628 3.54945 4.2136 3.77826 4.58584 4.32298C4.95808 4.86771 4.95808 5.59126 4.95808 7.03836V9.76C4.95808 12.7016 5.02132 13.6723 5.88772 14.5862C6.75412 15.5 8.14857 15.5 10.9375 15.5H12M16.2404 15.5C17.8014 15.5 18.5819 15.5 19.1336 15.0504C19.6853 14.6008 19.8429 13.8364 20.158 12.3075L20.6578 9.88275C21.0049 8.14369 21.1784 7.27417 20.7345 6.69708C20.2906 6.12 18.7738 6.12 17.0888 6.12H11.0235M4.95808 6.12H7"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                ></path>
+              </g>
+            </svg>
+          </button>
+        </form>
+      </div>
+      <div class="item item1">
+        <img
+          src="./images/cup-logo.png"
+          class="logo1"
+          alt="cup logo"
+          style="width: 270px; object-fit: contain"
+        />
+        <h1 style="color: #eeeeee">Product 8</h1>
+        <p style="color: #eeeeee">$159</p>
+        <form id="buying_form">
+          <button onclick="addToCart('Product 8', 159)">
+            Buy now
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#000000"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path d="M6 3h12"></path>
+                <path d="M6 8h12"></path>
+                <path d="M6 13l8.5 8"></path>
+                <path d="M6 13h3"></path>
+                <path d="M9 13c6.667 0 6.667-10 0-10"></path>
+              </g>
+            </svg>
+          </button>
+          <button onclick="addToCart('Product 8', 159)">
+            Add to Cart
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              width="21"
+              height="21"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M7.5 18C8.32843 18 9 18.6716 9 19.5C9 20.3284 8.32843 21 7.5 21C6.67157 21 6 20.3284 6 19.5C6 18.6716 6.67157 18 7.5 18Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M16.5 18.0001C17.3284 18.0001 18 18.6716 18 19.5001C18 20.3285 17.3284 21.0001 16.5 21.0001C15.6716 21.0001 15 20.3285 15 19.5001C15 18.6716 15.6716 18.0001 16.5 18.0001Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M13 13V11M13 11V9M13 11H15M13 11H11"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                ></path>
+                <path
+                  d="M2 3L2.26121 3.09184C3.5628 3.54945 4.2136 3.77826 4.58584 4.32298C4.95808 4.86771 4.95808 5.59126 4.95808 7.03836V9.76C4.95808 12.7016 5.02132 13.6723 5.88772 14.5862C6.75412 15.5 8.14857 15.5 10.9375 15.5H12M16.2404 15.5C17.8014 15.5 18.5819 15.5 19.1336 15.0504C19.6853 14.6008 19.8429 13.8364 20.158 12.3075L20.6578 9.88275C21.0049 8.14369 21.1784 7.27417 20.7345 6.69708C20.2906 6.12 18.7738 6.12 17.0888 6.12H11.0235M4.95808 6.12H7"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                ></path>
+              </g>
+            </svg>
+          </button>
+        </form>
+      </div>
+      <div class="item item1">
+        <img
+          src="./images/cup-logo.png"
+          class="logo1"
+          alt="cup logo"
+          style="width: 270px; object-fit: contain"
+        />
+        <h1 style="color: #eeeeee">Product 9</h1>
+        <p style="color: #eeeeee">$82</p>
+        <form id="buying_form">
+          <button onclick="addToCart('Product 9', 82)">
+            Buy now
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#000000"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path d="M6 3h12"></path>
+                <path d="M6 8h12"></path>
+                <path d="M6 13l8.5 8"></path>
+                <path d="M6 13h3"></path>
+                <path d="M9 13c6.667 0 6.667-10 0-10"></path>
+              </g>
+            </svg>
+          </button>
+          <button onclick="addToCart('Product 9', 82)">
+            Add to Cart
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              width="21"
+              height="21"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M7.5 18C8.32843 18 9 18.6716 9 19.5C9 20.3284 8.32843 21 7.5 21C6.67157 21 6 20.3284 6 19.5C6 18.6716 6.67157 18 7.5 18Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M16.5 18.0001C17.3284 18.0001 18 18.6716 18 19.5001C18 20.3285 17.3284 21.0001 16.5 21.0001C15.6716 21.0001 15 20.3285 15 19.5001C15 18.6716 15.6716 18.0001 16.5 18.0001Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M13 13V11M13 11V9M13 11H15M13 11H11"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                ></path>
+                <path
+                  d="M2 3L2.26121 3.09184C3.5628 3.54945 4.2136 3.77826 4.58584 4.32298C4.95808 4.86771 4.95808 5.59126 4.95808 7.03836V9.76C4.95808 12.7016 5.02132 13.6723 5.88772 14.5862C6.75412 15.5 8.14857 15.5 10.9375 15.5H12M16.2404 15.5C17.8014 15.5 18.5819 15.5 19.1336 15.0504C19.6853 14.6008 19.8429 13.8364 20.158 12.3075L20.6578 9.88275C21.0049 8.14369 21.1784 7.27417 20.7345 6.69708C20.2906 6.12 18.7738 6.12 17.0888 6.12H11.0235M4.95808 6.12H7"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                ></path>
+              </g>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+    <div class="container">
+      <footer class="footer">
+        <ul class="social-icon">
+          <li class="social-icon__item">
+            <a class="social-icon__link" href="#">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+          <li class="social-icon__item">
+            <a class="social-icon__link" href="#">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+          <li class="social-icon__item">
+            <a class="social-icon__link" href="#">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+          <li class="social-icon__item">
+            <a class="social-icon__link" href="#">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+        </ul>
+
+        <p>
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+          >&copy;2025 Gamer's Arsenal | All Rights Reserved
+        </p>
+      </footer>
+      <script
+        type="module"
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+      ></script>
+      <script
+        nomodule
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+      ></script>
+    </div>
+    <script>
+      // Cart functionality
+      function addToCart(product, price) {
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.push({ product, price });
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+        // Open cart page in a new tab
+        window.open("cart.html", "_blank");
+      }
+
+      function buyNow(product, price) {
+        const singleProductCart = [{ product, price }];
+        localStorage.setItem("cart", JSON.stringify(singleProductCart));
+        window.location.href = "cart.html"; // Redirect to cart page for checkout
+      }
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

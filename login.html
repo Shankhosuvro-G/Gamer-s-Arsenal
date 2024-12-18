@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.25" />
+    <title>Login page</title>
+    <link
+      rel="icon"
+      href="./images/gamers Arsenal logo.png"
+      type="image/x-icon"
+    />
+    <style>
+      @import url("https://fonts.cdnfonts.com/css/product-sans");
+
+      body {
+        font-family: "Product Sans", sans-serif;
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #191919;
+        flex-direction: column;
+      }
+      .card {
+        margin-top: 200px;
+        background-color: #3c3c3c;
+        border-radius: 10px;
+        padding: 30px;
+        width: 300px;
+      }
+      h2 {
+        color: #eeeeee;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+      input {
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 10px;
+        background-color: #b3b3b3;
+      }
+      button {
+        /* border: 1px solid white; */
+        border: none;
+        border-radius: 10px;
+        padding: 10px;
+        background-color: #eeeeee;
+        color: #3c3c3c;
+        transition: background-color 0.3s ease-in-out;
+      }
+      button:hover {
+        background-color: #212121;
+        color: #eeeeee;
+      }
+      .container {
+        display: flex;
+        background: #191919;
+        justify-content: flex-end;
+        align-items: flex-end;
+        margin-top: 80px;
+        margin-right: 40px;
+      }
+
+      .footer {
+        position: relative;
+        width: 100%;
+        background: #191919;
+        min-height: 100px;
+        padding: 20px 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .social-icon,
+      .menu {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0;
+        flex-wrap: wrap;
+      }
+
+      .social-icon__item,
+      .menu__item {
+        list-style: none;
+      }
+
+      .social-icon__link {
+        font-size: 2rem;
+        color: #fff;
+        margin: 0 10px;
+        display: inline-block;
+        transition: 0.5s;
+      }
+      .social-icon__link:hover {
+        transform: translateY(-10px);
+      }
+
+      .menu__link {
+        font-size: 1.2rem;
+        color: #fff;
+        margin: 0 10px;
+        display: inline-block;
+        transition: 0.5s;
+        text-decoration: none;
+        opacity: 0.75;
+        font-weight: 300;
+      }
+
+      .menu__link:hover {
+        opacity: 1;
+      }
+
+      .footer p {
+        color: #fff;
+        margin: 15px 0 10px 0;
+        font-size: 1rem;
+        font-weight: 300;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h2>Login to Gamer's Arsenal</h2>
+      <form>
+        <input type="email" placeholder="Email" />
+        <input type="password" placeholder="Password" />
+        <button type="submit">Login</button>
+      </form>
+    </div>
+    <div class="container">
+      <footer class="footer">
+        <ul class="social-icon">
+          <li class="social-icon__item">
+            <a class="social-icon__link" href="#">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+          <li class="social-icon__item">
+            <a class="social-icon__link" href="#">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+          <li class="social-icon__item">
+            <a class="social-icon__link" href="#">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+          <li class="social-icon__item">
+            <a class="social-icon__link" href="#">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+        </ul>
+
+        <p>
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+          >&copy;2025 Gamer's Arsenal | All Rights Reserved
+        </p>
+      </footer>
+      <script
+        type="module"
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+      ></script>
+      <script
+        nomodule
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+      ></script>
+    </div>
+  </body>
+</html>

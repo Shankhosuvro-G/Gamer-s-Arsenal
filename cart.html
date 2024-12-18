@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.25" />
+    <title>Cart</title>
+    <link
+      rel="icon"
+      href="./images/gamers Arsenal logo.png"
+      type="image/x-icon"
+    />
+    <style>
+      @import url("https://fonts.cdnfonts.com/css/product-sans");
+      body {
+        background: #191919;
+        margin: 0;
+        padding: 0;
+        font-family: "Product Sans", sans-serif;
+        height: 100%;
+        width: 100%;
+      }
+      .nav1 h2 {
+        margin: 0;
+      }
+      .nav-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .nav1 {
+        font-family: "Product Sans", sans-serif;
+        background-color: #191919;
+        padding: 5px;
+      }
+      .nav-content .name {
+        color: #eeeeee;
+        margin: 0;
+        padding-left: 10px;
+        font-size: 20px;
+      }
+      .nav1 ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        justify-content: right;
+      }
+      .nav1 li {
+        margin: 15px;
+        display: inline;
+      }
+      .nav1 a {
+        text-decoration: none;
+        color: #eeeeee;
+        padding: 5px 15px;
+        position: relative;
+        font-size: x-large;
+      }
+      .nav1 .login_btn {
+        background-color: #3c3c3c;
+        color: #eeeeee;
+        border: none;
+        padding: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .nav1 a::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        background-color: #eeeeee;
+        transform: scaleX(0);
+        transition: transform 0.3s ease-in-out;
+      }
+      .nav1 a:hover::after {
+        transform: scaleX(1);
+      }
+      .login_btn {
+        font-size: x-large;
+        transition: background-color 0.3s ease-in-out;
+      }
+      .login_btn:hover {
+        color: #191919;
+        background-color: #eeeeee;
+      }
+      .cart {
+        background-color: #3c3c3c;
+        padding: 20px;
+        margin: 20px auto;
+        border-radius: 10px;
+        width: 80%;
+        color: #eeeeee;
+      }
+      .cart-items {
+        list-style: none;
+        padding: 0;
+      }
+      .cart-items li {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 0;
+      }
+      button {
+        font-size: large;
+        font-family: "Product Sans", sans-serif;
+        padding: 20px;
+        gap: 10px;
+        margin: 10px;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+      }
+      button:hover {
+        background-color: #191919;
+        color: #eeeeee;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav1">
+      <div class="nav-content">
+        <h2 class="name" style="font-size: xx-large">Gamer's Arsenal</h2>
+        <!-- <h2 class="page-name">Products</h2> -->
+        <ul>
+          <li><a href="index.html">About</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <button class="login_btn">
+            <a href="login.html" class="login_btn" target="_blank">Login</a>
+          </button>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="cart">
+      <h2>Shopping Cart</h2>
+      <ul class="cart-items" id="cartItems">
+        <!-- Items will be dynamically added here -->
+      </ul>
+      <h3>Total: $<span id="cartTotal">0</span></h3>
+      <button onclick="checkout()">Checkout</button>
+    </div>
+
+    <script>
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+      const cartItems = document.getElementById("cartItems");
+      const cartTotal = document.getElementById("cartTotal");
+
+      function renderCart() {
+        cartItems.innerHTML = "";
+        let total = 0;
+        cart.forEach((item, index) => {
+          total += item.price;
+          const li = document.createElement("li");
+          li.innerHTML = `
+            <span>${item.product}</span>
+            <span>$${item.price}</span>
+            <button onclick="removeFromCart(${index})">Remove</button>
+          `;
+          cartItems.appendChild(li);
+        });
+        cartTotal.innerText = total;
+      }
+
+      function removeFromCart(index) {
+        cart.splice(index, 1);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        renderCart();
+      }
+
+      function checkout() {
+        if (cart.length === 0) {
+          alert("Your cart is empty!");
+          return;
+        }
+        // Redirect to a "Thank You" page
+        window.location.href = "thankyou.html";
+      }
+
+      renderCart();
+    </script>
+  </body>
+</html>
